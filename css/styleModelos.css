@@ -1,0 +1,142 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    /*box-sizing: border-box;
+    border: 1px red solid;*/
+}
+
+ul{
+    display: inline-block;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+/* ESTILOS BODY*/
+#body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(187, 187, 187);
+}
+
+
+
+/*ESTILOS HEADER*/
+#header {
+    background-color: rgba(53, 63, 80, 0.671);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLogo {
+    width: 80px;
+}
+
+#navbar { 
+    text-align: right;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#navbar , ul , li a {
+    color: black;
+    text-decoration: none; /* quita subrayado */
+    padding: 10px;
+}
+
+
+
+/*ESTILOS FOOTER*/
+
+#footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    background-color: rgba(53, 63, 80, 0.671);
+    bottom: 0vh;
+}
+
+.footerNav-copy{
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footerUl {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerRedesLogo{
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+/*--ESTILOS DE MODELOS--*/
+
+
+/* -- ESTILOS DE MAIN -- */
+#mainModelos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(300px 1fr) ;
+    padding: 0px 0px 20px 0px;
+}
+
+
+
+/* -- ESTILOS DE LAS IMAGENES EN CASILLEROS -- */
+/* -- Metodologia BEM : bloque-elemento-modificacion -- */
+.equipo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.equipo__card {
+    width: 17%;
+    height: 100%;
+    /*border: 1px solid red*/;
+
+}
+
+.equipo__card:hover {
+    padding-bottom: 10px ;
+    padding-right: 5px;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.521);
+    border-radius: 18px;
+}
+
+/* -- ESTILOS DE LAS IMAGENES  -- */
+
+.modelo--perfil {
+    width: 100%;
+    height: auto;
+    border-radius: 38px;
+    box-shadow: 0px 0px 30px #22222293;
+}
+
+
+.tituloModelos{
+    text-align: initial;
+    padding: 20px;
+}
+
