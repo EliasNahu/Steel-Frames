@@ -1,0 +1,50 @@
+/*--ESTILOS DE MODELOS--*/
+
+
+/* -- ESTILOS DE MAIN -- */
+#mainModelos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(300px 1fr) ;
+    padding: 0px 0px 20px 0px;
+}
+
+
+
+/* -- ESTILOS DE LAS IMAGENES EN CASILLEROS -- */
+/* -- Metodologia BEM : bloque-elemento-modificacion -- */
+.equipo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.equipo__card {
+    width: 17%;
+    height: 100%;
+    /*border: 1px solid red*/;
+
+}
+
+.equipo__card:hover {
+    padding-bottom: 10px ;
+    padding-right: 5px;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.521);
+    border-radius: 18px;
+}
+
+/* -- ESTILOS DE LAS IMAGENES  -- */
+
+.modelo--perfil {
+    width: 100%;
+    height: auto;
+    border-radius: 38px;
+    box-shadow: 0px 0px 30px #22222293;
+}
+
+
+.tituloModelos{
+    text-align: initial;
+    padding: 20px;
+}

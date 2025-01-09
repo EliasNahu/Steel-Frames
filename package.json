@@ -1,0 +1,19 @@
+{
+  "name": "pre-entrega2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliasNahu/Steel-Frames.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliasNahu/Steel-Frames/issues"
+  },
+  "homepage": "https://github.com/EliasNahu/Steel-Frames#readme",
+  "description": ""
+}
