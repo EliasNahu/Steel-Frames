@@ -1,4 +1,8 @@
-/* ESTILOS RESET*/
+/* =======================================
+   Estilos Generales (comunes a todas las páginas)
+   ======================================= */
+
+/* ESTILOS RESET */
 * {
     padding: 0px;
     margin: 0px;
@@ -6,65 +10,194 @@
     /*box-sizing: border-box;
     border: 1px red solid;*/
 }
-ul{
+
+/* Estilos de lista */
+ul {
     display: inline-block;
     margin: auto;
 }
-li{
+
+li {
     list-style: none;
     display: inline-block;
     text-align: center;
 }
 
-/* ESTILOS BODY*/
-#body {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: rgb(187, 187, 187);
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(187, 187, 187); /* Color de fondo gris */
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
- 
-/*ESTILOS HEADER*/
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+}
+/*  =======================================
+        Estilos del Header
+    ======================================= */
+
+/* ESTILOS HEADER */
 #header {
-    background-color: rgba(53, 63, 80, 0.671);
-}
-.headerLogo {
-    width: 80px;
-}
-.navbar-nav {
-    margin-right: 0;
-    font-size: 20px
+    background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+    padding: 10px 0;
 }
 
-/*ESTILOS FOOTER*/
-#footer{
+.headerLogo {
+    width: 80px;
+    height: auto;
+}
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .headerLogo {
+        width: 80px;
+        height: auto;
+    }
+}
+
+.navbar-nav {
+    margin-right: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    color: #fff; /* Blanco para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Color azul al pasar el cursor */
+}
+
+.navbar-toggler {
+    border-color: #007bff; /* Color del botón del menú en móvil */
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff;
+}
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* =======================================
+   Estilos del Footer
+   ======================================= */
+
+/* ESTILOS FOOTER */
+#footer {
     width: 100%;
     display: flex;
-    justify-content: space-around ;
+    justify-content: space-around;
     align-items: center;
-    background-color: rgba(53, 63, 80, 0.671);
-    bottom: 0vh;
+    background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+    padding: 20px 0;
+    bottom: 0;
 }
-.footerNav-copy{
+
+.footerNav-copy {
     font-size: 15px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
 .footerUl {
     display: flex;
     flex-direction: column;
 }
-.footerRedesLogo{
+
+.footerRedesLogo {
     text-decoration: none;
     padding: 20px;
     text-align: center;
 }
 
-/*ESTILOS MAIN = INDEX*/
+.footerRedes {
+    text-align: center;
+}
+
+.footerRedes a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .footerRedes img {
+    width: 50px;
+    height: 50px;
+}
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .footerNav-copy ul {
+        flex-direction: column;
+    }
+
+    .footerNav-copy li {
+        margin: 10px 0;
+    }
+
+    .footerRedes img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .footerRedes img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+/* =======================================
+   Estilos del Index
+   ======================================= */
+
+/* ESTILOS MAIN */
 #mainIndex{
     max-width: 100%;
     margin: 0 auto;
@@ -128,11 +261,55 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
     line-height: 1.5;
 }
 
-/* --ESTILOS DE SERVICIOS-- */
+/* --S-- */
 
-img{
-    max-width: 300px;
-} 
+
+/* =======================================
+    ESTILOS DE SERVICIOS
+   ======================================= */
+
+/* Estilos del Main */
+
+main #mainServicios {
+    padding: 20px;
+}
+
+.ilustreServicios {
+    margin-bottom: 40px;
+}
+
+.ilustreServicios img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ilustreServicios h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+.ilustreServicios p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #7f8c8d;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+
+    .ilustreServicios img {
+        max-width: 100%;
+    }
+}
 
 
 
