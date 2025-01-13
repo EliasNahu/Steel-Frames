@@ -1,5 +1,5 @@
 /* =======================================
-   Estilos Generales (comunes a todas las páginas)
+   Estilos Generales
    ======================================= */
 
 /* ESTILOS RESET */
@@ -77,7 +77,8 @@ body {
 
 .navbar-nav {
     margin-right: 0;
-    font-size: 20px;
+
+    font-size: 25px;
     text-align: center;
 }
 
@@ -86,22 +87,22 @@ body {
 }
 
 .navbar-nav .nav-link {
-    font-size: 16px;
-    color: #fff; /* Blanco para los enlaces */
+    font-size: 20px;
+    color: #000000; /* Blanco para los enlaces */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff; /* Color azul al pasar el cursor */
+    color: #000000; /* Color azul al pasar el cursor */
 }
 
 .navbar-toggler {
-    border-color: #007bff; /* Color del botón del menú en móvil */
+    border-color: #000000; /* Color del botón del menú en móvil */
 }
 
 .navbar-toggler-icon {
-    background-color: #007bff;
+    background-color: #000000;
 }
 
 /* =======================================
@@ -220,7 +221,6 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 .imagen1index{
     grid-area: img;
     margin: auto;
-
 }
 .titulo1index {
     display: inline;
@@ -236,14 +236,14 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 }
 .titulo1index{
     margin: auto;
-    font-weight: 900;
-    font-size:50px;
+    font-weight: 700;
+    font-size:40px;
 }
 .titulo2index {
     padding: 30px;
     margin: auto;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 25px;
     color: brown;
     text-align: center;
 }
@@ -260,9 +260,6 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
     font-weight: bold;
     line-height: 1.5;
 }
-
-/* --S-- */
-
 
 /* =======================================
     ESTILOS DE SERVICIOS
