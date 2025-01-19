@@ -1,4 +1,8 @@
-/* ESTILOS RESET*/
+/* =======================================
+   Estilos Generales
+   ======================================= */
+
+/* ESTILOS RESET */
 * {
     padding: 0px;
     margin: 0px;
@@ -6,75 +10,197 @@
     /*box-sizing: border-box;
     border: 1px red solid;*/
 }
-ul{
+
+/* Estilos de lista */
+ul {
     display: inline-block;
     margin: auto;
 }
-li{
+
+li {
     list-style: none;
     display: inline-block;
     text-align: center;
 }
 
-/* ESTILOS BODY*/
-#body {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: rgb(187, 187, 187);
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(187, 187, 187); /* Color de fondo gris */
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
- 
-/*ESTILOS HEADER*/
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+}
+/*  =======================================
+        Estilos del Header
+    ======================================= */
+
+/* ESTILOS HEADER */
 #header {
-    background-color: rgba(53, 63, 80, 0.671);
-}
-.headerLogo {
-    width: 80px;
-}
-.navbar-nav {
-    margin-right: 0;
-    font-size: 20px
+    background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+    padding: 10px 0;
 }
 
-/*ESTILOS FOOTER*/
-#footer{
-    width: 100%;
+.headerLogo {
+    width: 80px;
     height: auto;
-    display: flex;
-    justify-content: space-around ;
-    align-items: center;
-    background-color: rgba(53, 63, 80, 0.671);
-    /* bottom: 0vh; */
-    margin-top: auto;
-    padding: auto;
 }
-.footerNav-copy{
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .headerLogo {
+        width: 80px;
+        height: auto;
+    }
+}
+
+.navbar-nav {
+    margin-right: 0;
+
+    font-size: 25px;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 20px;
+    color: #000000; /* Blanco para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0000008f; /* Color azul al pasar el cursor */
+}
+
+.navbar-toggler {
+    border-color: #00000070; /* Color del botón del menú en móvil */
+}
+
+.navbar-toggler-icon {
+    background-color: #00000000;
+}
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* =======================================
+   Estilos del Footer
+   ======================================= */
+
+/* ESTILOS FOOTER */
+#footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+    padding: 20px 0;
+    bottom: 0;
+}
+
+.footerNav-copy {
     font-size: 15px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
 .footerUl {
     display: flex;
     flex-direction: column;
 }
-.footerRedesLogo{
+
+.footerRedesLogo {
     text-decoration: none;
     padding: 20px;
     text-align: center;
 }
 
+.footerRedes {
+    text-align: center;
+}
 
-/* --ESTILOS DE INICIO-- */
+.footerRedes a {
+    margin: 0 10px;
+    display: inline-block;
+}
 
-/* -- ESTILOS DE MAIN -- */
+footer .footerRedes img {
+    width: 50px;
+    height: 50px;
+}
 
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .footerNav-copy ul {
+        flex-direction: column;
+    }
+
+    .footerNav-copy li {
+        margin: 10px 0;
+    }
+
+    .footerRedes img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .footerRedes img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+/* =======================================
+   Estilos del Index
+   ======================================= */
+
+/* ESTILOS MAIN */
 #mainIndex{
     max-width: 100%;
-    min-height: 100vh;
     margin: 0 auto;
 } 
 #mainIndex{
@@ -95,7 +221,6 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 .imagen1index{
     grid-area: img;
     margin: auto;
-
 }
 .titulo1index {
     display: inline;
@@ -111,14 +236,14 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 }
 .titulo1index{
     margin: auto;
-    font-weight: 900;
-    font-size:50px;
+    font-weight: 700;
+    font-size:40px;
 }
 .titulo2index {
     padding: 30px;
     margin: auto;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 25px;
     color: brown;
     text-align: center;
 }
@@ -136,25 +261,63 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
     line-height: 1.5;
 }
 
-/* --ESTILOS DE SERVICIOS-- */
+/* =======================================
+    ESTILOS DE SERVICIOS
+   ======================================= */
 
-/* -- ESTILOS DE MAIN -- */
+/* Estilos del Main */
 
-#mainServicios{
+main #mainServicios {
+    padding: 20px;
+}
+
+.ilustreServicios {
+    margin-bottom: 40px;
+}
+
+.ilustreServicios img {
+    width: 100%;
+    height: auto;
     max-width: 100%;
-    min-height: 100vh;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ilustreServicios h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+.ilustreServicios p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #7f8c8d;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+
+    .ilustreServicios img {
+        max-width: 100%;
+    }
 }
 
 
 
 /*--ESTILOS DE MODELOS--*/
 
+
 /* -- ESTILOS DE MAIN -- */
 #mainModelos{
-    max-width: 100%;
-    min-height: 100vh;
+    width: 100%;
     display: grid;
-    grid-template-columns: minmax(300px 1fr) ;
+    grid-template-columns: minmax(300px, 1fr) ;
     padding: 0px 0px 20px 0px;
 }
 
@@ -165,12 +328,13 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 .equipo{
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .equipo__card {
-    width: 17%;
+    width: 90%;
     height: 100%;
     /*border: 1px solid red*/;
 
@@ -186,58 +350,119 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 /* -- ESTILOS DE LAS IMAGENES  -- */
 
 .modelo--perfil {
-    width: 100%;
-    height: 200PX;
+    width: 100vh;
+    height: 12em;
     border-radius: 38px;
     box-shadow: 0px 0px 30px #22222293;
 }
 
 
 .tituloModelos{
-    text-align: initial;
+    text-align: center;
     padding: 20px;
 }
 
-/*--ESTILOS DE CONTACTOS--*/
 
-
-/* -- ESTILOS DE MAIN -- */
-
-#mainContactos{
-    max-width: 100%;
-    min-height: 100vh;
-}
-
-
-
-/*--ESTILOS DE NUESTRA OFICINA--*/
-
-
-/* -- ESTILOS DE MAIN -- */
-
-#mainNuestraOficina {
-    max-width: 100%;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.contenedor-ubicacion {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.ubicacion {
-    width: 48%;
-    height: 400px;
-    border: none;
-}
-
-
-@media (max-width: 768px) {
-    .ubicacion {
-        width: 100%;
-        height: 250px;
+@media screen and (max-width: 768px){
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+    .equipo__card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .modelo--perfil{
+        width: 90%;
+        height: 90%;
     }
 }
+
+/* =======================================
+    ESTILOS DE NUESTRA OFICINA
+   ======================================= */
+
+   /* Estilos del main */
+  
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .image-gallery {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .map-container {
+        position: relative;
+        padding-bottom: 56.25%; 
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .image-gallery {
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .intro-text {
+            font-size: 0.9rem;
+        }
+    }

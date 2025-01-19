@@ -1,0 +1,68 @@
+/*  =======================================
+        Estilos del Header
+    ======================================= */
+
+/* ESTILOS HEADER */
+#header {
+    background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+    padding: 10px 0;
+}
+
+.headerLogo {
+    width: 80px;
+    height: auto;
+}
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .headerLogo {
+        width: 80px;
+        height: auto;
+    }
+}
+
+.navbar-nav {
+    margin-right: 0;
+
+    font-size: 25px;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 20px;
+    color: #000000; /* Blanco para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0000008f; /* Color azul al pasar el cursor */
+}
+
+.navbar-toggler {
+    border-color: #00000070; /* Color del botón del menú en móvil */
+}
+
+.navbar-toggler-icon {
+    background-color: #00000000;
+}
+
+/* =======================================
+   Estilos Responsivos
+   ======================================= */
+
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
