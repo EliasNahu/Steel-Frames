@@ -1,8 +1,10 @@
-@use "reset";
-@use "header";
-@use "page-index";
-@use "page-servicios";
-@use "page-modelos";
-@use "page-contacto";
-@use "page-nuestraOficina";
-@use "footer";
+@import "presets/reset";
+@import "presets/header";
+@import "presets/footer";
+
+// PAGES
+@import "pages-sass/page-index";
+@import "pages-sass/page-servicios";
+@import "pages-sass/page-modelos";
+@import "pages-sass/page-contactos";
+@import "pages-sass/page-nuestaOficina";
