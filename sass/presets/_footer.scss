@@ -1,74 +1,61 @@
-/* =======================================
-   Estilos del Footer
-   ======================================= */
-
 /* ESTILOS FOOTER */
 #footer {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+    background-image: radial-gradient(Ellipse 100vh 200vh  , rgba(50, 41, 131, 0.705) ,rgb(122, 147, 194) , rgb(68, 68, 68));
+    // background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
     padding: 20px 0;
     bottom: 0;
-}
-
-.footerNav-copy {
-    font-size: 15px;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footerUl {
-    display: flex;
-    flex-direction: column;
-}
-
-.footerRedesLogo {
-    text-decoration: none;
-    padding: 20px;
-    text-align: center;
-}
-
-.footerRedes {
-    text-align: center;
-}
-
-.footerRedes a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .footerRedes img {
-    width: 50px;
-    height: 50px;
-}
-
-/* =======================================
-   Estilos Responsivos
-   ======================================= */
-/* Media Queries para dispositivos pequeños */
-@media screen and (max-width: 768px) {
-    .footerNav-copy ul {
+        .footerImagen {
+        width: 100px;
+        height: 100px;
+    }
+    .footerNav-copy {
+        font-size: 15px;
+        font-weight: 600;
+        display: flex;
         flex-direction: column;
+        text-align: center;
+            .footerUl {
+        display: flex;
+        flex-direction: row;
+        }
     }
 
-    .footerNav-copy li {
-        margin: 10px 0;
+
+    .footerRedes {
+        text-align: center;
+        .footerRedes a {
+            margin: 0 10px;
+            display: inline-block;
+            .footerRedesLogo {
+                text-decoration: none;
+                padding: 20px;
+                text-align: center;
+            }
+        }
     }
 
-    .footerRedes img {
-        width: 40px;
-        height: 40px;
+
+    /* Media Queries para dispositivos pequeños */
+    @media screen and (max-width: 868px) {
+        .footerNav-copy ul {
+            flex-direction: column;
+        }
+        .footerNav-copy li {
+            margin: 10px 0;
+        }
+        .footerRedes img {
+            width: 30px;
+            height: 30px;
+        }
     }
-}
-
-@media screen and (max-width: 480px) {
-
-    .footerRedes img {
-        width: 35px;
-        height: 35px;
+    @media screen and (max-width: 480px) {
+        .footerRedes img {
+            width: 30px;
+            height: 30px;
+        }
     }
 }

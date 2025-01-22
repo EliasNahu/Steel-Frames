@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* =======================================
-   Estilos Generales
-   ======================================= */
 /* ESTILOS RESET */
 * {
   padding: 0px;
@@ -16,8 +13,7 @@ ul {
   display: inline-block;
   margin: auto;
 }
-
-li {
+ul li {
   list-style: none;
   display: inline-block;
   text-align: center;
@@ -35,9 +31,6 @@ body {
   height: 100%;
 }
 
-/* =======================================
-   Estilos Responsivos
-   ======================================= */
 @media screen and (max-width: 480px) {
   h2 {
     font-size: 20px;
@@ -46,249 +39,198 @@ body {
     font-size: 14px;
   }
 }
-/*  =======================================
-        Estilos del Header
-    ======================================= */
 /* ESTILOS HEADER */
 #header {
-  background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+  background-image: radial-gradient(rgba(50, 41, 131, 0.705), rgb(122, 147, 194), rgb(68, 68, 68));
   padding: 10px 0;
+  /* Media Queries para dispositivos pequeños */
+  /* Media Queries para dispositivos pequeños */
 }
-
-.headerLogo {
+#header .headerLogo {
   width: 80px;
   height: auto;
 }
-
-/* =======================================
-   Estilos Responsivos
-   ======================================= */
-/* Media Queries para dispositivos pequeños */
 @media screen and (max-width: 768px) {
-  .headerLogo {
+  #header .headerLogo {
     width: 80px;
     height: auto;
   }
 }
-.navbar-nav {
+#header .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.4392156863); /* Color del botón del menú en móvil */
+}
+#header .navbar-toggler-icon {
+  background-color: rgba(0, 0, 0, 0);
+}
+#header .navbar-nav {
   margin-right: 0;
   font-size: 25px;
   text-align: center;
 }
-
-.navbar-nav .nav-item {
+#header .navbar-nav .nav-item {
   margin: 0 15px;
 }
-
-.navbar-nav .nav-link {
+#header .navbar-nav .nav-link {
   font-size: 20px;
-  color: #000000; /* Blanco para los enlaces */
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
-.navbar-nav .nav-link:hover {
-  color: rgba(0, 0, 0, 0.5607843137); /* Color azul al pasar el cursor */
+#header .navbar-nav .nav-link:hover {
+  color: rgba(60, 6, 209, 0.5607843137); /* Color al pasar el cursor */
 }
-
-.navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.4392156863); /* Color del botón del menú en móvil */
-}
-
-.navbar-toggler-icon {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-/* =======================================
-   Estilos Responsivos
-   ======================================= */
-/* Media Queries para dispositivos pequeños */
 @media screen and (max-width: 768px) {
-  .navbar-nav {
+  #header .navbar-nav {
     text-align: center;
   }
 }
-/* =======================================
-   Estilos del Footer
-   ======================================= */
+
 /* ESTILOS FOOTER */
 #footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
+  background-image: radial-gradient(Ellipse 100vh 200vh, rgba(50, 41, 131, 0.705), rgb(122, 147, 194), rgb(68, 68, 68));
   padding: 20px 0;
   bottom: 0;
+  /* Media Queries para dispositivos pequeños */
 }
-
-.footerNav-copy {
+#footer .footerImagen {
+  width: 100px;
+  height: 100px;
+}
+#footer .footerNav-copy {
   font-size: 15px;
   font-weight: 600;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
-.footerUl {
+#footer .footerNav-copy .footerUl {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
-
-.footerRedesLogo {
+#footer .footerRedesLogo {
   text-decoration: none;
   padding: 20px;
   text-align: center;
 }
-
-.footerRedes {
+#footer .footerRedes {
   text-align: center;
 }
-
-.footerRedes a {
+#footer .footerRedes a {
   margin: 0 10px;
   display: inline-block;
 }
-
-footer .footerRedes img {
-  width: 50px;
-  height: 50px;
-}
-
-/* =======================================
-   Estilos Responsivos
-   ======================================= */
-/* Media Queries para dispositivos pequeños */
-@media screen and (max-width: 768px) {
-  .footerNav-copy ul {
+@media screen and (max-width: 868px) {
+  #footer .footerNav-copy ul {
     flex-direction: column;
   }
-  .footerNav-copy li {
+  #footer .footerNav-copy li {
     margin: 10px 0;
   }
-  .footerRedes img {
-    width: 40px;
-    height: 40px;
+  #footer .footerRedes img {
+    width: 30px;
+    height: 30px;
   }
 }
 @media screen and (max-width: 480px) {
-  .footerRedes img {
-    width: 35px;
-    height: 35px;
+  #footer .footerRedes img {
+    width: 30px;
+    height: 30px;
   }
 }
+
 /* =======================================
    Estilos del Index
    ======================================= */
 /* ESTILOS MAIN */
-#mainIndex {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-#mainIndex {
-  display: grid;
-  grid-template-areas: "img        img         img   " "title1     title1      title1" "title2     texto1      texto1";
-  grid-template-columns: 1fr 2fr 1fr, repeat(auto-fit, minmax 150px, 1fr);
-  grid-template-rows: 2fr 1fr 2fr;
-  min-height: 100vh;
-}
-
 /* Por si me sale mal las grids de la index , este es el machete 
 display: grid;
 grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
+#mainIndex {
+  display: grid;
+  grid-template-areas: "img img img" "title1 title1 title1" "title2 texto1 texto1";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
 .imagen1index {
   grid-area: img;
   margin: auto;
 }
 
 .titulo1index {
-  display: inline;
   text-align: center;
-  font-size: xx-large;
+  font-size: 2rem;
   grid-area: title1;
 }
 
 .titulo2index {
+  padding: 20px;
+  margin: auto;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: brown;
+  text-align: center;
   grid-area: title2;
 }
 
 .texto1index {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(77, 1, 255, 0.096);
+  border-radius: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
   grid-area: texto1;
 }
 
-.titulo1index {
-  margin: auto;
-  font-weight: 700;
-  font-size: 40px;
-}
-
-.titulo2index {
-  padding: 30px;
-  margin: auto;
-  font-weight: 600;
-  font-size: 25px;
-  color: brown;
-  text-align: center;
-}
-
-.texto1index {
-  display: inline-block;
-  text-align: center;
-  margin: auto;
-  height: auto;
-  width: auto;
-  padding: 30px;
-  background-color: rgba(77, 1, 255, 0.096);
-  border-radius: 130px;
-  font-family: montserrat;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-/* =======================================
-    ESTILOS DE SERVICIOS
-   ======================================= */
-/* Estilos del Main */
-main #mainServicios {
-  padding: 20px;
-}
-
-.ilustreServicios {
-  margin-bottom: 40px;
-}
-
-.ilustreServicios img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.ilustreServicios h2 {
-  font-size: 28px;
-  color: #2c3e50;
-  margin-top: 10px;
-}
-
-.ilustreServicios p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #7f8c8d;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* =======================================
-   Estilos Responsivos
-   ======================================= */
 /* Media Queries para dispositivos pequeños */
-@media screen and (max-width: 768px) {
-  .ilustreServicios img {
-    max-width: 100%;
+@media (max-width: 768px) {
+  #mainIndex {
+    grid-template-areas: "img" "title1" "title2" "texto1";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .titulo1index {
+    font-size: 1.5rem;
+  }
+  .titulo2index {
+    font-size: 1.2rem;
+  }
+  .texto1index {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  .imagen1index img {
+    width: 100%;
+    height: auto;
   }
 }
+/* Media Queries para dispositivos muy pequeños (por ejemplo, teléfonos) */
+@media (max-width: 480px) {
+  .titulo1index {
+    font-size: 1.2rem;
+  }
+  .titulo2index {
+    font-size: 1rem;
+  }
+  .texto1index {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .imagen1index img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Estilos del Main */
+/* Media Queries para dispositivos pequeños */
 /*--ESTILOS DE MODELOS--*/
 /* -- ESTILOS DE MAIN -- */
 #mainModelos {
@@ -347,38 +289,31 @@ main #mainServicios {
     height: 90%;
   }
 }
-/* =======================================
-    ESTILOS DE NUESTRA OFICINA
-   ======================================= */
 /* Estilos del main */
 .container {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
 }
-
-h1 {
+.container h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
-
-.intro-text {
+.container .intro-text {
   font-size: 1.2rem;
   text-align: center;
   color: #555;
   margin-bottom: 30px;
 }
-
-.image-gallery {
+.container .image-gallery {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 30px;
 }
-
-.image-gallery img {
+.container .image-gallery img {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -386,47 +321,25 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
-.image-gallery img:hover {
+.container .image-gallery img:hover {
   transform: scale(1.05);
 }
-
-.map-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 30px;
-}
-
-.map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
-}
-
 @media (max-width: 768px) {
-  .image-gallery {
+  .container .image-gallery {
     justify-content: center;
   }
-  .image-gallery img {
+  .container .image-gallery img {
     max-width: 100%;
   }
-  .intro-text {
+  .container .intro-text {
     font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
-  h1 {
+  .container h1 {
     font-size: 1.5rem;
   }
-  .intro-text {
+  .container .intro-text {
     font-size: 0.9rem;
   }
 }

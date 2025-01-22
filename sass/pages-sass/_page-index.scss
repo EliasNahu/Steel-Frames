@@ -3,64 +3,162 @@
    ======================================= */
 
 /* ESTILOS MAIN */
-#mainIndex{
-    max-width: 100%;
-    margin: 0 auto;
-} 
-#mainIndex{
-    display: grid;
-    grid-template-areas:
-            /*c1        c2         c3    */
-    /*f1*/  "img        img         img   "
-    /*f2*/  "title1     title1      title1"
-    /*f3*/  "title2     texto1      texto1"
-    ;
-    grid-template-columns: 1fr 2fr 1fr , repeat(auto-fit , minmax (150px , 1fr));
-    grid-template-rows: 2fr 1fr 2fr;
-    min-height: 100vh;
-}
+// #mainIndex{
+//     max-width: 100%;
+//     margin: 0 auto;
+// } 
+// #mainIndex{
+//     display: grid;
+//     grid-template-areas:
+//             /*c1        c2         c3    */
+//     /*f1*/  "img        img         img   "
+//     /*f2*/  "title1     title1      title1"
+//     /*f3*/  "title2     texto1      texto1"
+//     ;
+//     grid-template-columns: 1fr 2fr 1fr , repeat(auto-fit , minmax (150px , 1fr));
+//     grid-template-rows: 2fr 1fr 2fr;
+//     min-height: 100vh;
+// }
 /* Por si me sale mal las grids de la index , este es el machete 
 display: grid;
 grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
-.imagen1index{
+// .imagen1index{
+//     grid-area: img;
+//     margin: auto;
+// }
+// .titulo1index {
+//     display: inline;
+//     text-align: center;
+//     font-size:xx-large;
+//     grid-area: title1;
+// }
+// .titulo2index{
+//     grid-area: title2;
+// }
+// .texto1index{
+//     grid-area: texto1;
+// }
+// .titulo1index{
+//     margin: auto;
+//     font-weight: 700;
+//     font-size:40px;
+// }
+// .titulo2index {
+//     padding: 30px;
+//     margin: auto;
+//     font-weight: 600;
+//     font-size: 25px;
+//     color: brown;
+//     text-align: center;
+// }
+// .texto1index {
+//     display: inline-block;
+//     text-align:center;
+//     margin: auto;
+//     height: auto;
+//     width: auto;
+//     padding: 30px;
+//     background-color: rgba(77, 1, 255, 0.096);
+//     border-radius: 130px;
+//     font-family: montserrat;
+//     font-weight: bold;
+//     line-height: 1.5;
+// }
+
+
+
+#mainIndex {
+    display: grid;
+    grid-template-areas:
+        "img img img"
+        "title1 title1 title1"
+        "title2 texto1 texto1";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.imagen1index {
     grid-area: img;
     margin: auto;
 }
+
 .titulo1index {
-    display: inline;
     text-align: center;
-    font-size:xx-large;
+    font-size: 2rem;
     grid-area: title1;
 }
-.titulo2index{
-    grid-area: title2;
-}
-.texto1index{
-    grid-area: texto1;
-}
-.titulo1index{
-    margin: auto;
-    font-weight: 700;
-    font-size:40px;
-}
+
 .titulo2index {
-    padding: 30px;
+    padding: 20px;
     margin: auto;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: brown;
     text-align: center;
+    grid-area: title2;
 }
+
 .texto1index {
-    display: inline-block;
-    text-align:center;
-    margin: auto;
-    height: auto;
-    width: auto;
-    padding: 30px;
+    text-align: center;
+    padding: 20px;
     background-color: rgba(77, 1, 255, 0.096);
-    border-radius: 130px;
-    font-family: montserrat;
+    border-radius: 10px;
+    font-family: Montserrat, sans-serif;
     font-weight: bold;
     line-height: 1.5;
+    grid-area: texto1;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    #mainIndex {
+        grid-template-areas:
+            "img"
+            "title1"
+            "title2"
+            "texto1";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .titulo1index {
+        font-size: 1.5rem;
+    }
+
+    .titulo2index {
+        font-size: 1.2rem;
+    }
+
+    .texto1index {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .imagen1index img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Media Queries para dispositivos muy pequeños (por ejemplo, teléfonos) */
+@media (max-width: 480px) {
+    .titulo1index {
+        font-size: 1.2rem;
+    }
+
+    .titulo2index {
+        font-size: 1rem;
+    }
+
+    .texto1index {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .imagen1index img {
+        width: 100%;
+        height: auto;
+    }
 }
