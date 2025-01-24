@@ -65,6 +65,7 @@ body {
 #header .navbar-nav {
   margin-right: 0;
   font-size: 25px;
+  font-weight: 500;
   text-align: center;
 }
 #header .navbar-nav .nav-item {
@@ -111,17 +112,17 @@ body {
   display: flex;
   flex-direction: row;
 }
-#footer .footerRedesLogo {
-  text-decoration: none;
-  padding: 20px;
-  text-align: center;
-}
 #footer .footerRedes {
   text-align: center;
 }
-#footer .footerRedes a {
+#footer .footerRedes .footerRedes a {
   margin: 0 10px;
   display: inline-block;
+}
+#footer .footerRedes .footerRedes a .footerRedesLogo {
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
 }
 @media screen and (max-width: 868px) {
   #footer .footerNav-copy ul {
@@ -142,13 +143,7 @@ body {
   }
 }
 
-/* =======================================
-   Estilos del Index
-   ======================================= */
 /* ESTILOS MAIN */
-/* Por si me sale mal las grids de la index , este es el machete 
-display: grid;
-grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 #mainIndex {
   display: grid;
   grid-template-areas: "img img img" "title1 title1 title1" "title2 texto1 texto1";
@@ -165,14 +160,15 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 
 .titulo1index {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
   grid-area: title1;
 }
 
 .titulo2index {
   padding: 20px;
   margin: auto;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1.5rem;
   color: brown;
   text-align: center;
@@ -182,7 +178,7 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
 .texto1index {
   text-align: center;
   padding: 20px;
-  background-color: rgba(77, 1, 255, 0.096);
+  background-color: rgba(77, 1, 255, 0.13);
   border-radius: 10px;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
@@ -229,8 +225,11 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
     height: auto;
   }
 }
-/* Estilos del Main */
-/* Media Queries para dispositivos pequeños */
+.tituloServis {
+  text-align: center;
+  padding: 20px;
+}
+
 /*--ESTILOS DE MODELOS--*/
 /* -- ESTILOS DE MAIN -- */
 #mainModelos {
@@ -289,16 +288,20 @@ grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));  */
     height: 90%;
   }
 }
+.tituloContacto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Estilos del main */
 .container {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
 }
-.container h1 {
+.container .tituloOficina {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
 }
 .container .intro-text {
   font-size: 1.2rem;
