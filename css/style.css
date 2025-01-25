@@ -263,7 +263,8 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  justify-self: center;
+  padding: 0 10px;
+  justify-items: center;
 }
 
 .equipo__card {
@@ -277,9 +278,13 @@ body {
 
 .equipo__card:hover {
   padding-bottom: 10px;
-  padding-right: 5px;
+  margin-right: 5px;
   box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.521);
-  border-radius: 18px;
+  border-radius: 38px;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+  -ms-border-radius: 38px;
+  -o-border-radius: 38px;
 }
 
 /* -- ESTILOS DE LAS IMAGENES  -- */
@@ -347,6 +352,16 @@ body {
 .container .image-gallery img:hover {
   transform: scale(1.05);
 }
+.container .iframe--oficina {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+.container .iframe--oficina iframe {
+  width: 50%;
+  height: 300px;
+}
 @media (max-width: 768px) {
   .container .image-gallery {
     justify-content: center;
@@ -356,6 +371,14 @@ body {
   }
   .container .intro-text {
     font-size: 1rem;
+  }
+  .container .iframe--oficina {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+  }
+  .container .iframe--oficina iframe {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {

@@ -19,18 +19,29 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-bottom: 30px;
-    }
-    .image-gallery img {
+        img {
         width: 100%;
         max-width: 300px;
         height: auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.05);
+        }
+        }
     }
-    .image-gallery img:hover {
-        transform: scale(1.05);
+    .iframe--oficina {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        iframe {
+            width: 50%;
+            height: 300px;
+        }
     }
+
     @media (max-width: 768px) {
         .image-gallery {
             justify-content: center;
@@ -41,6 +52,15 @@
         .intro-text {
             font-size: 1rem;
         }
+        .iframe--oficina {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+            iframe {
+                width: 100%;
+            }
+        }
+        
     }
     @media (max-width: 480px) {
         h1 {
