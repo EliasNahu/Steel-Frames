@@ -36,6 +36,7 @@
 .texto1index {
     text-align: center;
     padding: 20px;
+    margin-right: 10px;
     background-color: rgba(77, 1, 255, 0.13);
     border-radius: 10px;
     font-family: Montserrat, sans-serif;
@@ -54,6 +55,9 @@
             "texto1";
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
+        .titulo1index{
+            margin: 10px;
+        }
     }
 
     .titulo1index {

@@ -180,6 +180,7 @@ body {
 .texto1index {
   text-align: center;
   padding: 20px;
+  margin-right: 10px;
   background-color: rgba(77, 1, 255, 0.13);
   border-radius: 10px;
   font-family: Montserrat, sans-serif;
@@ -194,6 +195,9 @@ body {
     grid-template-areas: "img" "title1" "title2" "texto1";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
+  }
+  #mainIndex .titulo1index {
+    margin: 10px;
   }
   .titulo1index {
     font-size: 1.5rem;
@@ -230,6 +234,15 @@ body {
 .tituloServis {
   text-align: center;
   padding: 20px;
+}
+
+.container--servicios .item {
+  width: 300px;
+  height: 400px;
+}
+.container--servicios img {
+  width: 100%;
+  height: 200px;
 }
 
 /*--ESTILOS DE MODELOS--*/
