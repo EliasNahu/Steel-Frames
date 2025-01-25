@@ -3,11 +3,11 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     background-image: radial-gradient(Ellipse 100vh 200vh  , rgba(50, 41, 131, 0.705) ,rgb(122, 147, 194) , rgb(68, 68, 68));
     // background-color: rgba(53, 63, 80, 0.671); /* Fondo oscuro translúcido */
     padding: 20px 0;
-    bottom: 0;
         .footerImagen {
         width: 100px;
         height: 100px;
@@ -21,12 +21,14 @@
             .footerUl {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         }
     }
 
 
     .footerRedes {
         text-align: center;
+        flex-wrap: wrap;
         .footerRedes a {
             margin: 0 10px;
             display: inline-block;

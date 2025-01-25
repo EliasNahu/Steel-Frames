@@ -91,10 +91,10 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   background-image: radial-gradient(Ellipse 100vh 200vh, rgba(50, 41, 131, 0.705), rgb(122, 147, 194), rgb(68, 68, 68));
   padding: 20px 0;
-  bottom: 0;
   /* Media Queries para dispositivos pequeños */
 }
 #footer .footerImagen {
@@ -111,9 +111,11 @@ body {
 #footer .footerNav-copy .footerUl {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 #footer .footerRedes {
   text-align: center;
+  flex-wrap: wrap;
 }
 #footer .footerRedes .footerRedes a {
   margin: 0 10px;
@@ -161,15 +163,15 @@ body {
 .titulo1index {
   text-align: center;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   grid-area: title1;
 }
 
 .titulo2index {
   padding: 20px;
   margin: auto;
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: 400;
   color: brown;
   text-align: center;
   grid-area: title2;
@@ -234,6 +236,7 @@ body {
 /* -- ESTILOS DE MAIN -- */
 #mainModelos {
   width: 100%;
+  margin: auto 5px;
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
   padding: 0px 0px 20px 0px;
@@ -247,12 +250,16 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  justify-self: center;
 }
 
 .equipo__card {
   width: 90%;
   height: 100%;
   /*border: 1px solid red*/
+}
+.equipo__card img {
+  width: 100%;
 }
 
 .equipo__card:hover {

@@ -4,6 +4,7 @@
 /* -- ESTILOS DE MAIN -- */
 #mainModelos{
     width: 100%;
+    margin: auto 5px;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) ;
     padding: 0px 0px 20px 0px;
@@ -19,13 +20,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-self: center;
 }
 
 .equipo__card {
     width: 90%;
     height: 100%;
     /*border: 1px solid red*/;
-
+    img {
+        width: 100%;
+    }
 }
 
 .equipo__card:hover {
