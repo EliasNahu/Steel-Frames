@@ -24,12 +24,11 @@
         flex-wrap: wrap;
         }
     }
-
-
     .footerRedes {
         text-align: center;
         flex-wrap: wrap;
-        .footerRedes a {
+        a {
+            text-decoration: none;
             margin: 0 10px;
             display: inline-block;
             .footerRedesLogo {
@@ -39,8 +38,6 @@
             }
         }
     }
-
-
     /* Media Queries para dispositivos pequeños */
     @media screen and (max-width: 868px) {
         .footerNav-copy ul {
