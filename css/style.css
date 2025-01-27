@@ -187,7 +187,7 @@ body {
   line-height: 1.5;
   grid-area: texto1;
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   #mainIndex #mainIndex {
     grid-template-areas: "img" "title1" "title2" "texto1";
     grid-template-columns: 1fr;

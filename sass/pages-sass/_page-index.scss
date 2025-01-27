@@ -40,7 +40,7 @@
         grid-area: texto1;
     }
     /* Media Queries para dispositivos pequeños */
-    @media (max-width: 768px) {
+    @media (max-width: 1080px) {
         #mainIndex {
             grid-template-areas:
                 "img"
