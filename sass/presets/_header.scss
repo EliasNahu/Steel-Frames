@@ -17,9 +17,9 @@
     // Boton de menu hamburguesa
     .navbar-toggler {
         border-color: #00000070; /* Color del botón del menú en móvil */
+        .navbar-toggler-icon {
+            background-color: #00000000;
         }
-    .navbar-toggler-icon {
-        background-color: #00000000;
     }
     // Estilos de ul
     .navbar-nav {

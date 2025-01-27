@@ -27,6 +27,7 @@ body {
   background-color: rgb(187, 187, 187); /* Color de fondo gris */
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 }
@@ -59,7 +60,7 @@ body {
 #header .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.4392156863); /* Color del botón del menú en móvil */
 }
-#header .navbar-toggler-icon {
+#header .navbar-toggler .navbar-toggler-icon {
   background-color: rgba(0, 0, 0, 0);
 }
 #header .navbar-nav {
@@ -88,6 +89,7 @@ body {
 
 /* ESTILOS FOOTER */
 #footer {
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -154,8 +156,7 @@ body {
   grid-template-rows: auto auto auto;
   min-height: 100vh;
   margin: 0 auto;
-  /* Media Queries para dispositivos pequeños */
-  /* Media Queries para dispositivos muy pequeños*/
+  flex-wrap: wrap;
 }
 #mainIndex .imagen1index {
   grid-area: img;
@@ -163,23 +164,25 @@ body {
 }
 #mainIndex .titulo1index {
   text-align: center;
+  justify-content: center;
   font-size: 3rem;
   font-weight: 700;
   grid-area: title1;
 }
 #mainIndex .titulo2index {
+  text-align: center;
+  justify-content: center;
   padding: 20px;
   margin: auto;
   font-size: 1.5rem;
   font-weight: 400;
   color: brown;
-  text-align: center;
   grid-area: title2;
 }
 #mainIndex .texto1index {
   text-align: center;
   padding: 20px;
-  margin-right: 10px;
+  margin: 10px;
   background-color: rgba(77, 1, 255, 0.13);
   border-radius: 10px;
   font-family: Montserrat, sans-serif;
@@ -187,44 +190,53 @@ body {
   line-height: 1.5;
   grid-area: texto1;
 }
-@media (max-width: 1080px) {
-  #mainIndex #mainIndex {
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 780px) {
+  #mainIndex {
     grid-template-areas: "img" "title1" "title2" "texto1";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
-  #mainIndex #mainIndex .titulo1index {
+  #mainIndex .titulo1index {
     margin: 10px;
     font-size: 1.5rem;
   }
-  #mainIndex #mainIndex .titulo2index {
-    font-size: 1.2rem;
-  }
-  #mainIndex #mainIndex .imagen1index img {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 480px) {
-  #mainIndex .titulo1index {
-    font-size: 1.2rem;
-  }
   #mainIndex .titulo2index {
-    font-size: 1rem;
-  }
-  #mainIndex .texto1index {
-    padding: 10px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   #mainIndex .imagen1index img {
     width: 100%;
     height: auto;
   }
 }
-
+/* Media Queries para dispositivos muy pequeños*/
+@media (max-width: 480px) {
+  .titulo1index {
+    font-size: 1.2rem;
+  }
+  .titulo2index {
+    font-size: 1rem;
+  }
+  .texto1index {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .imagen1index img {
+    width: 100%;
+    height: auto;
+  }
+}
+#mainServicios {
+  height: 100vh;
+}
 #mainServicios .tituloServis {
   text-align: center;
+  justify-content: center;
   padding: 20px;
+  margin: 20px;
 }
 #mainServicios .container--servicios .item {
   width: 300px;
@@ -238,14 +250,16 @@ body {
 /* -- ESTILOS DE MAIN -- */
 #mainModelos {
   width: 100%;
-  margin: auto 5px;
+  margin: 10px;
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
   padding: 0px 0px 20px 0px;
 }
 #mainModelos .tituloModelos {
   text-align: center;
+  justify-content: center;
   padding: 20px;
+  margin: 20px;
 }
 #mainModelos .equipo {
   width: 100%;
@@ -253,13 +267,14 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 0 10px;
-  justify-items: center;
 }
 #mainModelos .equipo .equipo__card {
   width: 90%;
   height: 100%;
-  /*border: 1px solid red*/
+  background-color: rgba(240, 248, 255, 0.507);
+  text-align: left;
+  border-radius: 38px;
+  /*border: 1px solid red;*/
   /* -- ESTILOS DE LAS IMAGENES  -- */
 }
 #mainModelos .equipo .equipo__card .modelo--perfil {
@@ -281,6 +296,18 @@ body {
   -ms-border-radius: 38px;
   -o-border-radius: 38px;
 }
+#mainModelos .equipo .equipo__card .modelo--titulo {
+  justify-content: center;
+}
+#mainModelos .equipo .equipo__card p {
+  margin: 5px;
+}
+#mainModelos .equipo .equipo__card a {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  font-weight: 600;
+}
 @media screen and (max-width: 768px) {
   #mainModelos .equipo {
     grid-template-columns: 1fr;
@@ -297,7 +324,7 @@ body {
 
 .tituloContacto {
   text-align: center;
-  margin-bottom: 20px;
+  justify-content: center;
 }
 
 /* Estilos del main */
@@ -308,7 +335,9 @@ body {
 }
 .containerOficina .tituloOficina {
   text-align: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
 }
 .containerOficina .intro-text {
   font-size: 1.2rem;

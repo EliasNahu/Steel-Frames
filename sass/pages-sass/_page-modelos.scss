@@ -1,13 +1,15 @@
 /* -- ESTILOS DE MAIN -- */
 #mainModelos{
     width: 100%;
-    margin: auto 5px;
+    margin: 10px;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) ;
     padding: 0px 0px 20px 0px;
     .tituloModelos{
         text-align: center;
+        justify-content: center;
         padding: 20px;
+        margin: 20px;
     }
     .equipo{
         width: 100%;
@@ -15,12 +17,14 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-        padding: 0 10px;
-        justify-items: center;
+        // padding: 0 10px;
         .equipo__card {
             width: 90%;
             height: 100%;
-            /*border: 1px solid red*/;
+            background-color: rgba(240, 248, 255, 0.507);
+            text-align: left;
+            border-radius: 38px;
+            /*border: 1px solid red;*/
             /* -- ESTILOS DE LAS IMAGENES  -- */
             .modelo--perfil {
                 width: 100vh;
@@ -40,6 +44,18 @@
                 -moz-border-radius: 38px;
                 -ms-border-radius: 38px;
                 -o-border-radius: 38px;
+            }
+            .modelo--titulo{
+                justify-content: center;
+            }
+            p{
+                margin: 5px;
+            }
+            a{
+                display: flex;
+                justify-content: center;
+                margin: 15px;
+                font-weight: 600;
             }
         }
     }

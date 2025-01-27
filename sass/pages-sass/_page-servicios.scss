@@ -1,7 +1,10 @@
 #mainServicios{
+    height: 100vh;
     .tituloServis{
         text-align: center;
+        justify-content: center;
         padding: 20px;
+        margin: 20px;
     }
     .container--servicios {
         .item {
