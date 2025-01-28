@@ -31,6 +31,9 @@ body {
   width: 100%;
   height: 100%;
 }
+body main {
+  min-height: 100vh;
+}
 
 @media screen and (max-width: 480px) {
   h2 {
@@ -106,13 +109,9 @@ body {
 #footer .footerNav-copy {
   font-size: 15px;
   font-weight: 600;
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 #footer .footerNav-copy .footerUl {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 #footer .footerRedes {
@@ -154,9 +153,7 @@ body {
   grid-template-areas: "img img img" "title1 title1 title1" "title2 texto1 texto1";
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto auto auto;
-  min-height: 100vh;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 #mainIndex .imagen1index {
   grid-area: img;
@@ -230,7 +227,7 @@ body {
   }
 }
 #mainServicios {
-  height: 100vh;
+  min-height: 100vh;
 }
 #mainServicios .tituloServis {
   text-align: center;

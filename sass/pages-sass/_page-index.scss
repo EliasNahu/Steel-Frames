@@ -7,9 +7,7 @@
         "title2 texto1 texto1";
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto auto auto;
-    min-height: 100vh;
     margin: 0 auto;
-    flex-wrap: wrap;
     .imagen1index {
         grid-area: img;
         margin: auto;
