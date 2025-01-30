@@ -7,13 +7,6 @@
         width: 80px;
         height: auto;
     }
-    /* Media Queries para dispositivos pequeños */
-    @media screen and (max-width: 768px) {
-        .headerLogo {
-            width: 80px;
-            height: auto;
-        }
-    }
     // Boton de menu hamburguesa
     .navbar-toggler {
         border-color: #00000070; /* Color del botón del menú en móvil */
@@ -40,11 +33,17 @@
             }
         }
     }
-    /* Media Queries para dispositivos pequeños */
-    @media screen and (max-width: 768px) {
-        .navbar-nav {
-            text-align: center;
-        }
+}
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .headerLogo {
+        width: 80px;
+        height: auto;
     }
 }
-
+/* Media Queries para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}

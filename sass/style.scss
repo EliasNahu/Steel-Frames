@@ -1,7 +1,6 @@
 // PRESETS
 @use "presets/reset";
 @use "presets/header";
-@use "presets/footer";
 
 // PAGES
 @use "pages-sass/page-index";
@@ -9,3 +8,6 @@
 @use "pages-sass/page-modelos";
 @use "pages-sass/page-contactos";
 @use "pages-sass/page-nuestaOficina";
+
+//FOOTER
+@use "presets/footer";

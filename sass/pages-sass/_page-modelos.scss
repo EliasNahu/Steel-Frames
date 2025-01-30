@@ -59,25 +59,17 @@
             }
         }
     }
-    @media screen and (max-width: 768px){
-        .equipo {
-            grid-template-columns: 1fr;
-        }
-        .equipo__card {
-            width: 90%;
-            margin-bottom: 20px;
-        }
-        .modelo--perfil{
-            width: 90%;
-            height: 90%;
-        }
+}
+@media screen and (max-width: 768px){
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+    .equipo__card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .modelo--perfil{
+        width: 90%;
+        height: 90%;
     }
 }
-
-
-
-
-
-
-
-
