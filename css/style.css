@@ -245,20 +245,20 @@ body main {
   margin: 15px;
   font-weight: 600;
 }
-
-@media screen and (max-width: 768px) {
-  .equipo {
+@media screen and (max-width: 868px) {
+  #mainModelos .equipo {
     grid-template-columns: 1fr;
   }
-  .equipo__card {
+  #mainModelos .equipo__card {
     width: 90%;
     margin-bottom: 20px;
   }
-  .modelo--perfil {
+  #mainModelos .modelo--perfil {
     width: 90%;
     height: 90%;
   }
 }
+
 .tituloContacto {
   text-align: center;
   justify-content: center;
@@ -310,34 +310,34 @@ body main {
   width: 50%;
   height: 300px;
 }
-
 @media (max-width: 768px) {
-  .image-gallery {
+  .containerOficina .image-gallery {
     justify-content: center;
   }
-  .image-gallery img {
+  .containerOficina .image-gallery img {
     max-width: 100%;
   }
-  .intro-text {
+  .containerOficina .intro-text {
     font-size: 1rem;
   }
-  .iframe--oficina {
+  .containerOficina .iframe--oficina {
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 20px;
   }
-  .iframe--oficina iframe {
+  .containerOficina .iframe--oficina iframe {
     width: 100%;
   }
 }
 @media (max-width: 480px) {
-  h1 {
+  .containerOficina h1 {
     font-size: 1.5rem;
   }
-  .intro-text {
+  .containerOficina .intro-text {
     font-size: 0.9rem;
   }
 }
+
 /* ESTILOS FOOTER */
 #footer {
   margin-top: 20px;
