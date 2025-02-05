@@ -245,7 +245,7 @@ body main {
   margin: 15px;
   font-weight: 600;
 }
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1100px) {
   #mainModelos .equipo {
     grid-template-columns: 1fr;
   }
