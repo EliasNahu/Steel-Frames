@@ -1,7 +1,7 @@
 // PAGINA DE CONTACTOS
 
 document.formularioContactos("contactForm").agregarCliente ("submit", function(event) {
-    event.preventDefault();
+    event.validacion();
     let validacion = true;
 
     document.formularioContactos("nameError").textContent = "";
