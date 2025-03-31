@@ -1,49 +1,49 @@
 // PAGINA DE CONTACTOS
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+document.formularioContactos("contactForm").agregarCliente ("submit", function(event) {
     event.preventDefault();
     let validacion = true;
 
-    document.getElementById("nameError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("phoneError").textContent = "";
-    document.getElementById("contactMethodError").textContent = "";
-    document.getElementById("messageError").textContent = "";
+    document.formularioContactos("nameError").textContent = "";
+    document.formularioContactos("emailError").textContent = "";
+    document.formularioContactos("phoneError").textContent = "";
+    document.formularioContactos("contactMethodError").textContent = "";
+    document.formularioContactos("messageError").textContent = "";
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const name = document.formularioContactos("name").value.trim();
+    const email = document.formularioContactos("email").value.trim();
+    const phone = document.formularioContactos("phone").value.trim();
+    const message = document.formularioContactos("message").value.trim();
     const contactMethod = document.querySelector('input[name="contactMethod"]:checked');
 
     if (name === "") {
-        document.getElementById("nameError").textContent = "El nombre es obligatorio.";
+        document.formularioContactos("nameError").textContent = "El nombre es obligatorio.";
         validacion = false;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-        document.getElementById("emailError").textContent = "Correo inválido.";
+        document.formularioContactos("emailError").textContent = "Correo inválido.";
         validacion = false;
     }
 
     if (phone.length < 8) {
-        document.getElementById("phoneError").textContent = "El número de teléfono debe tener al menos 8 dígitos.";
+        document.formularioContactos("phoneError").textContent = "El número de teléfono debe tener al menos 8 dígitos.";
         validacion = false;
     }
 
     if (!contactMethod) {
-        document.getElementById("contactMethodError").textContent = "Selecciona un método de contacto.";
+        document.formularioContactos("contactMethodError").textContent = "Selecciona un método de contacto.";
         validacion = false;
     }
 
     if (message === "") {
-        document.getElementById("messageError").textContent = "El mensaje no puede estar vacío.";
+        document.formularioContactos("messageError").textContent = "El mensaje no puede estar vacío.";
         validacion = false;
     }
 
     if (validacion) {
         alert("Formulario enviado con éxito.");
-        document.getElementById("contactForm").reset();
+        document.formularioContactos("contactForm").reset();
     }
 });
