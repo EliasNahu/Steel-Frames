@@ -1,5 +1,4 @@
 // PAGINA DE CONTACTOS
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
     const nameInput = document.getElementById("name");
@@ -11,58 +10,51 @@ document.addEventListener("DOMContentLoaded", () => {
     resultDiv.id = "resultMessage";
     form.appendChild(resultDiv);
 
-    // Cargar datos almacenados
+    // Cargar datos si existen
     loadStoredData();
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         clearErrors();
-        let valid = true;
         resultDiv.innerHTML = "";
 
-        // Validaciones
-        if (nameInput.value.trim() === "") {
-            showError("name", "El nombre es obligatorio.");
-            valid = false;
-        }
+        let valid = true;
 
-        if (!validateEmail(emailInput.value.trim())) {
-            showError("email", "Correo inválido.");
-            valid = false;
-        }
+        nameInput.value.trim() === "" && (showError("name", "El nombre es obligatorio."), valid = false);
+        !validateEmail(emailInput.value.trim()) && (showError("email", "Correo inválido."), valid = false);
+        phoneInput.value.trim().length < 8 && (showError("phone", "El número de teléfono debe tener al menos 8 dígitos."), valid = false);
 
-        if (phoneInput.value.trim().length < 8) {
-            showError("phone", "El número de teléfono debe tener al menos 8 dígitos.");
-            valid = false;
-        }
+        const selectedMethod = [...contactMethods].some(method => method.checked);
+        !selectedMethod && (showErrorForContactMethod("Selecciona un método de contacto."), valid = false);
 
-        let selectedMethod = false;
-        contactMethods.forEach((method) => {
-            if (method.checked) selectedMethod = true;
-        });
-        if (!selectedMethod) {
-            showErrorForContactMethod("Selecciona un método de contacto.");
-            valid = false;
-        }
-
-        if (messageInput.value.trim() === "") {
-            showError("message", "El mensaje no puede estar vacío.");
-            valid = false;
-        }
+        messageInput.value.trim() === "" && (showError("message", "El mensaje no puede estar vacío."), valid = false);
 
         if (valid) {
-            saveDataToLocalStorage();
+            const formData = {
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim(),
+                phone: phoneInput.value.trim(),
+                message: messageInput.value.trim(),
+                contactMethod: document.querySelector('input[name="contactMethod"]:checked').value
+            };
+
+            // Ejemplo de uso del spread operator
+            const extendedData = {
+                ...formData,
+                enviadoEn: new Date().toLocaleString()
+            };
+
+            localStorage.setItem("contactFormData", JSON.stringify(extendedData));
+
             showSuccess("Formulario enviado con éxito. Tus datos han sido almacenados.");
             localStorage.removeItem("contactFormData");
             form.reset();
         }
     });
 
-    // Funciones
-
     function showError(inputId, message) {
-        let inputElement = document.getElementById(inputId);
-        if (!inputElement) return; 
+        const inputElement = document.getElementById(inputId);
+        if (!inputElement) return;
 
         let errorDiv = document.getElementById(inputId + "Error");
         if (!errorDiv) {
@@ -86,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function clearErrors() {
-        document.querySelectorAll(".text-danger").forEach(errorDiv => errorDiv.remove());
+        document.querySelectorAll(".text-danger").forEach(div => div.remove());
     }
 
     function showSuccess(message) {
@@ -99,30 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return emailPattern.test(email);
     }
 
-    function saveDataToLocalStorage() {
-        const formData = {
-            name: nameInput.value.trim(),
-            email: emailInput.value.trim(),
-            phone: phoneInput.value.trim(),
-            message: messageInput.value.trim(),
-            contactMethod: document.querySelector('input[name="contactMethod"]:checked').value
-        };
-        localStorage.setItem("contactFormData", JSON.stringify(formData));
-    }
-
     function loadStoredData() {
         const storedData = localStorage.getItem("contactFormData");
         if (storedData) {
-            const data = JSON.parse(storedData);
-            nameInput.value = data.name;
-            emailInput.value = data.email;
-            phoneInput.value = data.phone;
-            messageInput.value = data.message;
+            const { name, email, phone, message, contactMethod } = JSON.parse(storedData);
 
-            const contactMethodInput = document.querySelector(`input[name="contactMethod"][value="${data.contactMethod}"]`);
-            if (contactMethodInput) {
-                contactMethodInput.checked = true;
-            }
+            nameInput.value = name;
+            emailInput.value = email;
+            phoneInput.value = phone;
+            messageInput.value = message;
+
+            const contactInput = document.querySelector(`input[name="contactMethod"][value="${contactMethod}"]`);
+            contactInput && (contactInput.checked = true);
         }
     }
 });
