@@ -1,4 +1,3 @@
-// PAGINA DE CONTACTOS
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
     const nameInput = document.getElementById("name");
@@ -10,9 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     resultDiv.id = "resultMessage";
     form.appendChild(resultDiv);
 
-    // Cargar datos si existen
+    // Cargar datos guardados del formulario
     loadStoredData();
 
+    // Cargar horarios desde JSON
+    loadHorarios();
+
+    // Validación y envío del formulario
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         clearErrors();
@@ -38,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactMethod: document.querySelector('input[name="contactMethod"]:checked').value
             };
 
-            // Ejemplo de uso del spread operator
+            // Uso de spread operator
             const extendedData = {
                 ...formData,
                 enviadoEn: new Date().toLocaleString()
@@ -46,11 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             localStorage.setItem("contactFormData", JSON.stringify(extendedData));
 
-            showSuccess("Formulario enviado con éxito. Tus datos han sido almacenados.");
+            Swal.fire({
+                title: '¡Mensaje enviado!',
+                text: 'Nos contactaremos contigo a la brevedad.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
             localStorage.removeItem("contactFormData");
             form.reset();
         }
     });
+
+    // Funciones auxiliares
 
     function showError(inputId, message) {
         const inputElement = document.getElementById(inputId);
@@ -105,4 +115,66 @@ document.addEventListener("DOMContentLoaded", () => {
             contactInput && (contactInput.checked = true);
         }
     }
+
+    function loadHorarios() {
+        fetch('../horarios.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("No se pudo cargar el archivo de horarios.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const horariosTable = document.querySelector('tbody');
+                if (!horariosTable) {
+                    console.warn("No se encontró la tabla para cargar horarios.");
+                    return;
+                }
+                horariosTable.innerHTML = '';
+                data.forEach(horario => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${horario.dia}</td><td>${horario.horario}</td>`;
+                    horariosTable.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar los horarios:', error);
+            });
+    }
+
+    function loadFraseInspiradora() {
+        const existing = document.getElementById("fraseInspiradora");
+        if (existing) existing.remove();
+    
+        fetch("../frases.json") // Ruta al archivo local
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("No se pudo cargar el archivo de frases.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const randomQuote = data[Math.floor(Math.random() * data.length)];
+                const frase = document.createElement("blockquote");
+                frase.id = "fraseInspiradora";
+                frase.textContent = `"${randomQuote.text}" — ${randomQuote.author || "Anónimo"}`;
+                frase.classList.add("my-3", "text-secondary", "fst-italic", "animate__animated", "animate__fadeIn");
+                const container = document.getElementById("fraseContainer");
+                container.prepend(frase);
+            })
+            .catch(error => {
+                console.error("Error al cargar la frase inspiradora:", error);
+            });
+    }
+    
+    
+    loadHorarios();
+    loadFraseInspiradora();
+
+    const nuevaFraseBtn = document.getElementById("nuevaFraseBtn");
+    nuevaFraseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        loadFraseInspiradora();
+    });
+
 });
